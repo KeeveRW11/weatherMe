@@ -16,8 +16,7 @@
         <div >
           <h2>Search for a City</h2>
           <form id="city-search" class="card-body">
-            <label class="form-label" for="username">Username</label>
-              <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+              <input name="username" id="username" type="text" autofocus="true" class="form-input" placeholder="City"/>
               <button type="submit" class="btn">Search</button>
           </form>
         </div>
@@ -29,7 +28,11 @@
             <!--http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}-->
         </div>
         <div class="five-day-forecast">
-
+            <h1 class="city-name"></h1>
+            <p class="temp"></p>
+            <p class="wind"></p>
+            <p class="humidity"></p>
+            <p class="uv"></p>         
         </div>
        </div>    
      </section>     

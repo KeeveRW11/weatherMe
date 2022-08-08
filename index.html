@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./assets/styles.css"/>
+  </head>
+  <body>
+     <header>
+        <h1>Weather Dashboard</h1>
+     </header>
+      <div >
+        <div >
+          <h2>Search for a City</h2>
+          <form id="city-search" class="card-body">
+            <label class="form-label" for="username">Username</label>
+              <input name="username" id="username" type="text" autofocus="true" class="form-input" />
+              <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+      </div>
+     <section>    
+       <div class="weather-box">
+        <div class="current-city-info">
+            <!--b8d240244c4cb961083733683eedcad3-->
+            <!--http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}-->
+        </div>
+        <div class="five-day-forecast">
+
+        </div>
+       </div>    
+     </section>     
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="assets/script.js"></script>
+  </body>
 </html>

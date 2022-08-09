@@ -68,3 +68,90 @@ var getCityInfo = function() {
 };
 
 getCityInfo();
+
+//4.5 half way through and it still works
+var getCityInfo = function() {
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+"London"+"&limit=5&appid=b8d240244c4cb961083733683eedcad3"
+    
+    
+    fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=b8d240244c4cb961083733683eedcad3")
+    .then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+        });
+    });
+    
+    
+};
+
+getCityInfo()
+
+//It will not allow the adding
+var getCityInfo = function(London) {
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + London + "&limit=5&appid=b8d240244c4cb961083733683eedcad3";
+    fetch(apiUrl).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+        });
+    });   
+};
+
+getCityInfo();
+//This works. Needed to pass info through variable first
+var getCityInfo = function(name) {
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + name + "&limit=5&appid=b8d240244c4cb961083733683eedcad3";
+    fetch(apiUrl).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+        });
+    });   
+};
+
+getCityInfo("Toronto");
+
+// Search button works
+var cityFormEl = document.querySelector("#city-search");
+var cityInputEl = document.querySelector("#city-name");
+
+var formSubmitHandler = function(event) {
+    event.preventDefault();
+    console.log(event);
+  };
+
+var getCityInfo = function(name) {
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + name + "&limit=5&appid=b8d240244c4cb961083733683eedcad3";
+    fetch(apiUrl).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+        });
+    });   
+};
+
+cityFormEl.addEventListener("submit", formSubmitHandler);
+
+//all still works
+var cityFormEl = document.querySelector("#city-search");
+var cityInputEl = document.querySelector("#city-name");
+
+var formSubmitHandler = function(event) {
+    event.preventDefault();
+    var cities = cityInputEl.value.trim();
+
+    if (cities) {
+        getCityInfo(cities);
+        cityInputEl.value = "";
+    }else {
+        alert("Please enter a valid city name.");
+    }
+  };
+
+var getCityInfo = function(name) {
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + name + "&limit=5&appid=b8d240244c4cb961083733683eedcad3";
+    fetch(apiUrl).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+        });
+    });   
+};
+
+cityFormEl.addEventListener("submit", formSubmitHandler);

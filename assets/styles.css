@@ -1,3 +1,40 @@
-.card {
-    
+header {
+    text-align: center;
+}
+
+.mainbox {
+    display: flex;
+    height: 400px;
+}
+
+.form-box {
+    width: 400px;
+    text-align: center;
+}
+.card-body {
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.weather-class {
+    display: flex;
+}
+
+.weather-box {
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 600px;
+    height: 550px;
+    overflow: hidden;
+    position: absolute;
+    float: left;
+}
+
+.five-day-forecast {
+
 }

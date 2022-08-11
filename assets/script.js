@@ -41,9 +41,9 @@ var formSubmitHandler = function(event) {
     event.preventDefault();
         var cities = cityInputEl.value.trim();
         
-
         if (cities) {
         getCityInfo(cities);
+        saveSearchHistory(cities);
         cityInputEl.value = "";
         }else {
         alert("Please enter a valid city name.");
@@ -52,13 +52,14 @@ var formSubmitHandler = function(event) {
 
 // save search history to load on next visit to website
 function saveSearchHistory(cities) {
-    searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
-
+    searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+    console.log(searchHistory, cities)
     if (!searchHistory.includes(cities)) {
         searchHistory.push(cities);
     }
 
-    localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+    localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
 };
+
 
 cityFormEl.addEventListener("submit", formSubmitHandler);

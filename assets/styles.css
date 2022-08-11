@@ -1,38 +1,77 @@
+* {
+    padding: 5px;
+}
+
+:root {
+    --primary-color: #1d3c45;
+    --secondary-color: #d2601a;
+    --tertiary-color: #fff1e1;
+}
+
+.column {
+    float: left;
+    width: 12%;
+    padding: 0 10px;
+}
 header {
+    border-bottom: 5px solid var(--primary-color);
+    width: auto;
     text-align: center;
+    margin: 0 auto 25px auto;
+    background-color: var(--secondary-color);
 }
 
-.mainbox {
-    display: flex;
-    height: 550px;
+.h2.content-title {
+    font-size: 50px;
+    font-weight: bolder;
 }
 
-.form-box {
-    width: 400px;
-    text-align: center;
-}
-.card-body {
-    background-color: #ffff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
-    width: 350px;
-    height: 500px;
-    overflow: hidden;
+
+.searchHistoryBtns {
+    width: 100%;
+    margin: 4px;
+    background-color: var(--primary-color);
 }
 
-.weather-class {
-    display: flex;
+.search-btn {
+    margin: auto;
+    background-color: var(--secondary-color);
+    margin: auto;
 }
 
-.current-weather-data {
+#city-search-btn:hover {
+    opacity: 1;
+}
+
+
+.weather-now {
     background-color: #ffff;
     border-radius: 10px;
     box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
     width: 600px;
-    height: 55
-    500px;
     overflow: hidden;
-    position: relative;
-    float: left;
+    float: right;
 }
 
+/* Color Grade for UV*/
+.lowRiskUVI {
+    background-color: green;
+}
+
+.moderateRiskUVI {
+    background-color: yellow;
+    color: black;
+}
+
+.moderateHighRiskUVI {
+    background-color: orange;
+    color: black
+}
+
+.highRiskUVI {
+    background-color: red;
+}
+
+.extremeRiskUVI {
+    background-color: purple;
+}

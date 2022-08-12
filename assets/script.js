@@ -80,6 +80,7 @@ var formSubmitHandler = function(event) {
         getCityInfo(cities);
         saveSearchHistory(cities);
         console.log(cityInputEl.value);
+        weatherStatusEl.innerHTML = cityInputEl.value + " (" + currentDay + ") ";
         cityInputEl.value = "";
         }else {
         alert("Please enter a valid city name.");

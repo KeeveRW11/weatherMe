@@ -51,6 +51,8 @@ header {
     width: 600px;
     overflow: hidden;
     float: right;
+    position: relative; 
+    top: -15px;
 }
 
 /* Color Grade for UV*/

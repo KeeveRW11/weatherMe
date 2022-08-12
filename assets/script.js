@@ -6,7 +6,7 @@ var weatherStatusEl = document.querySelector("#weather-status");
 
 
 var apiKey = "5&appid=b8d240244c4cb961083733683eedcad3";
-var cityCoords = "http://api.openweathermap.org/geo/1.0/direct?q=";
+var cityCoords = "https://api.openweathermap.org/geo/1.0/direct?q=";
 var openWeatherApi = "https://api.openweathermap.org/data/2.5/onecall?lat="
 var weatherIconUrl = 'http://openweathermap.org/img/wn/';
 var currentDay = moment().format('M/DD/YYYY');
